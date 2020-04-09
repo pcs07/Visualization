@@ -59,12 +59,12 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.csv("cars/cars.csv", function(error, cars) {
+d3.csv("opioid/opioid.csv", function(error, opioid) {
 
   // Extract the list of dimensions and create a scale for each.
-  x.domain(dimensions = d3.keys(cars[0]).filter(function(d) {
+  x.domain(dimensions = d3.keys(opioid[0]).filter(function(d) {
     return d != "name" && (y[d] = d3.scale.linear()
-        .domain(d3.extent(cars, function(p) { return +p[d]; }))
+        .domain(d3.extent(opioid, function(p) { return +p[d]; }))
         .range([height, 0]));
   }));
 
@@ -72,7 +72,7 @@ d3.csv("cars/cars.csv", function(error, cars) {
   background = svg.append("g")
       .attr("class", "background")
     .selectAll("path")
-      .data(cars)
+      .data(opioid)
     .enter().append("path")
       .attr("d", path);
 
@@ -80,7 +80,7 @@ d3.csv("cars/cars.csv", function(error, cars) {
   foreground = svg.append("g")
       .attr("class", "foreground")
     .selectAll("path")
-      .data(cars)
+      .data(opioid)
     .enter().append("path")
       .attr("d", path);
 
