@@ -16,7 +16,7 @@
       let chart = d3.scatterplotMatrix()
         .width(960)
         .height(600)
-        .traits(['Health Access', 'Mental Health', 'Default Rate', 'Death Rate'])
+        .traits(['Health Access', 'Mental Health', 'Avg Age','Default Rate', 'Death Rate'])
         .colorValueMapper(d => d.species)
       
       let svg = d3.select('body').append('svg')
