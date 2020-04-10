@@ -37,6 +37,7 @@ svg {
 
 </style>
 <body>
+  <h1>Parallel Coordinate </h1>
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script>
 
@@ -165,3 +166,30 @@ function brush() {
 }
 
 </script>
+<br><br> <br><br>
+<h1>Scatterplot Matrix </h1>
+<script src="d3/d3.scatterplotMatrix.js"></script>
+  <script>
+    (async function () {
+
+      /*
+      const data = [{x: 10, y: 10, z: 4}, {x: 20, y: 15, z: 6}, {x: 30, y: 0, z: 1}]
+      let chart = d3.scatterplotMatrix()
+        .width(960)
+        .height(600)
+        .traits(['x', 'y', 'z'])
+      */
+      
+      const data = await d3.csv("cars/scatter.csv")
+      let chart = d3.scatterplotMatrix()
+        .width(960)
+        .height(600)
+        .traits(['Health Access', 'Mental Health', 'Avg Age', 'Default Rate', 'Death Rate'])
+        .colorValueMapper(d => d.species)
+      
+      let svg = d3.select('body').append('svg')
+        .datum(data)
+        .call(chart)
+    })()
+  </script>
+</body>
