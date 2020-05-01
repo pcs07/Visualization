@@ -64,7 +64,7 @@ d3.csv("cars/parallel.csv", function(error, parallel) {
 
   // Extract the list of dimensions and create a scale for each.
   x.domain(dimensions = d3.keys(parallel[0]).filter(function(d) {
-    return d != "genre" && (y[d] = d3.scale.linear()
+    return d != "Genre" && (y[d] = d3.scale.linear()
         .domain(d3.extent(parallel, function(p) { return +p[d]; }))
         .range([height, 0]));
   }));
