@@ -90,7 +90,8 @@
           name: "runtime",
           scale: d3.scale.linear().range([height, 0]),
           type: "number"
-        },
+        }
+        ];
 
 
       var x = d3.scale.ordinal().domain(dimensions.map(function(d) { return d.name; })).rangePoints([0, width]),
