@@ -65,7 +65,7 @@ d3.csv("cars/parallel.csv", function(error, parallel) {
   // Extract the list of dimensions and create a scale for each.
   x.domain(dimensions = d3.keys(parallel[0]).filter(function(d) {
     return d != "genre" && (y[d] = d3.scale.linear()
-        .domain(d3.extent(opioid, function(p) { return +p[d]; }))
+        .domain(d3.extent(parallel, function(p) { return +p[d]; }))
         .range([height, 0]));
   }));
 
@@ -73,7 +73,7 @@ d3.csv("cars/parallel.csv", function(error, parallel) {
   background = svg.append("g")
       .attr("class", "background")
     .selectAll("path")
-      .data(opioid)
+      .data(parallel)
     .enter().append("path")
       .attr("d", path);
 
@@ -81,7 +81,7 @@ d3.csv("cars/parallel.csv", function(error, parallel) {
   foreground = svg.append("g")
       .attr("class", "foreground")
     .selectAll("path")
-      .data(opioid)
+      .data(parallel)
     .enter().append("path")
       .attr("d", path);
 
