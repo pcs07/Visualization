@@ -1,171 +1,86 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-<style>
-
-svg {
-  font: 10px sans-serif;
-}
-
-.background path {
-  fill: none;
-  stroke: #ddd;
-  shape-rendering: crispEdges;
-}
-
-.foreground path {
-  fill: none;
-  stroke: steelblue;
-}
-
-.brush .extent {
-  fill-opacity: .3;
-  stroke: #fff;
-  shape-rendering: crispEdges;
-}
-
-.axis line,
-.axis path {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-
-.axis text {
-  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
-  cursor: move;
-}
-
-</style>
+<html>
+<head>
+	<title>
+	</title>
+	<link rel="stylesheet" href="css/css.css">
+</head>
 <body>
-  <h1>Parallel Coordinate </h1>
-<script src="//d3js.org/d3.v3.min.js"></script>
-<script>
+	<div class="sidenav">
+		<a href = "index.html"> 
+			<img src="images/logo.png" alt="Prakash Logo">
+		</a>
+		<div class="sidenav-links">
+			<div><a href = "about.html"> About </a></div>
+			<div><a href = "education.html"> Education </a></div>
+			<div><a href = "resume.html"> Resume </a></div>
+			<div>
+				<b>Contact </b>
+				<ul>
+					<li><img src="images/mail.png" alt="Mail Icon"> shukla37@purdue.edu</li>
+					<li><img src="images/phone.png" alt="Phone Icon"> +1 765 409 9897</li>
+				</ul>
+			</div>
+			<div>
+				<b>Projects</b>
+				<div><a href = "securitymigration.html"> Cisco’s Security Migration </a></div>
+				<div><a href = "enroot.html"> Enroot </a></div>
+				<div><a href = "fitbit.html"> Fitbit </a></div>
+			</div>
+		</div>
+		<div class="sidenav-footer"> Designed and Coded with <img src="images/love.png" alt="Love"> by Prakash </div>
+	</div>
+	<div class="main">
+		<div class="main-intro">
+			<p> Hi, I'm </p>
+			<h1>Prakash Shukla</h1>
+			<p>I love to interact with humans and computers.</p>
+			<p>I’m a masters in Human Computer interaction. </p>
+		</div>
 
-var margin = {top: 30, right: 10, bottom: 10, left: 10},
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+		<div class="main-icons">
+			<span class="intro-icons"> <img src="images/designer.png" alt="Designer"></span>
+			<span class="intro-icons"> <img src="images/developer.png" alt="Front-End Developer"></span>
+			<span class="intro-icons"> <img src="images/dataviz.png" alt="Data-Visualizer"></span>
+			<span class="intro-icons"> <img src="images/talk.png" alt="Love to talk"></span>
+			<span class="intro-icons"> <img src="images/nature.png" alt="Nature Lover"></span>
+		</div>
 
-var x = d3.scale.ordinal().rangePoints([0, width], 1),
-    y = {},
-    dragging = {};
+		<hr class="hr-1">
 
-var line = d3.svg.line(),
-    axis = d3.svg.axis().orient("left"),
-    background,
-    foreground;
+		<h3> Projects </h3>
 
-var svg = d3.select("body").append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-  .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+		<div class="projects">
+			<img src="images/p1/thumbnail.png" alt="P1 Thumbnail">
+			<span>Interaction Design </span> <span>Agile Process</span>
+			<h3> Cisco's Security Migration </h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<a href="securitymigration.html"> Read the story <img src="images/arrow.png" alt="Read"> </a>
+		</div>
 
-d3.csv("cars/opioid.csv", function(error, opioid) {
+		<hr class="hr-2">
 
-  // Extract the list of dimensions and create a scale for each.
-  x.domain(dimensions = d3.keys(opioid[0]).filter(function(d) {
-    return d != "States" && (y[d] = d3.scale.linear()
-        .domain(d3.extent(opioid, function(p) { return +p[d]; }))
-        .range([height, 0]));
-  }));
+		<div class="projects">
+			<img src="images/p2/thumbnail.png" alt="P1 Thumbnail">
+			<span>College Project</span> <span>IIT Guwahati</span>
+			<h3> Enroot </h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<a href="enroot.html"> Read the story <img src="images/arrow.png" alt="Read"> </a>
+		</div>
 
-  // Add grey background lines for context.
-  background = svg.append("g")
-      .attr("class", "background")
-    .selectAll("path")
-      .data(opioid)
-    .enter().append("path")
-      .attr("d", path);
+		<hr class="hr-2">
 
-  // Add blue foreground lines for focus.
-  foreground = svg.append("g")
-      .attr("class", "foreground")
-    .selectAll("path")
-      .data(opioid)
-    .enter().append("path")
-      .attr("d", path);
+		<div class="projects">
+			<img src="images/p3/thumbnail.png" alt="P1 Thumbnail">
+			<span>College Project</span> <span>Purdue University</span>
+			<h3> Fitbit </h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<a href="fitbit.html"> Read the story <img src="images/arrow.png" alt="Read"> </a>
+		</div>
 
-  // Add a group element for each dimension.
-  var g = svg.selectAll(".dimension")
-      .data(dimensions)
-    .enter().append("g")
-      .attr("class", "dimension")
-      .attr("transform", function(d) { return "translate(" + x(d) + ")"; })
-      .call(d3.behavior.drag()
-        .origin(function(d) { return {x: x(d)}; })
-        .on("dragstart", function(d) {
-          dragging[d] = x(d);
-          background.attr("visibility", "hidden");
-        })
-        .on("drag", function(d) {
-          dragging[d] = Math.min(width, Math.max(0, d3.event.x));
-          foreground.attr("d", path);
-          dimensions.sort(function(a, b) { return position(a) - position(b); });
-          x.domain(dimensions);
-          g.attr("transform", function(d) { return "translate(" + position(d) + ")"; })
-        })
-        .on("dragend", function(d) {
-          delete dragging[d];
-          transition(d3.select(this)).attr("transform", "translate(" + x(d) + ")");
-          transition(foreground).attr("d", path);
-          background
-              .attr("d", path)
-            .transition()
-              .delay(500)
-              .duration(0)
-              .attr("visibility", null);
-        }));
+		<div class="footer"> 
+			<p>What to talk? Please contact me at prakashshukla7@gmail.com </p>
+		</div>
 
-  // Add an axis and title.
-  g.append("g")
-      .attr("class", "axis")
-      .each(function(d) { d3.select(this).call(axis.scale(y[d])); })
-    .append("text")
-      .style("text-anchor", "middle")
-      .attr("y", -9)
-      .text(function(d) { return d; });
-
-  // Add and store a brush for each axis.
-  g.append("g")
-      .attr("class", "brush")
-      .each(function(d) {
-        d3.select(this).call(y[d].brush = d3.svg.brush().y(y[d]).on("brushstart", brushstart).on("brush", brush));
-      })
-    .selectAll("rect")
-      .attr("x", -8)
-      .attr("width", 16);
-});
-
-function position(d) {
-  var v = dragging[d];
-  return v == null ? x(d) : v;
-}
-
-function transition(g) {
-  return g.transition().duration(500);
-}
-
-// Returns the path for a given data point.
-function path(d) {
-  return line(dimensions.map(function(p) { return [position(p), y[p](d[p])]; }));
-}
-
-function brushstart() {
-  d3.event.sourceEvent.stopPropagation();
-}
-
-// Handles a brush event, toggling the display of foreground lines.
-function brush() {
-  var actives = dimensions.filter(function(p) { return !y[p].brush.empty(); }),
-      extents = actives.map(function(p) { return y[p].brush.extent(); });
-  foreground.style("display", function(d) {
-    return actives.every(function(p, i) {
-      return extents[i][0] <= d[p] && d[p] <= extents[i][1];
-    }) ? null : "none";
-  });
-}
-
-</script>
-<br><br> <br><br>
-
+	</div>
 </body>
+</html>
