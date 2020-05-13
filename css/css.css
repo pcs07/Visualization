@@ -12,3 +12,31 @@ a {
     padding-top: 15px;
     padding-bottom: 15px;
 }
+
+
+
+/* For Screens > 1920px  */
+@media (min-width: 1920px) {
+	.main-intro {
+		height: 300px;
+		display:block;
+	}
+	.sidenav {
+		width:20%;
+	}
+}
+
+@media (min-width: 1024px) and (max-width:1921px) {
+	.sidenav {
+        position: fixed;
+        height: 100%;
+        width: 30%;
+        display: inline-block;
+    }
+    .main {
+        left: 30%;
+        position: relative;
+        display: block;
+        width: 70%;
+    }
+}
