@@ -6,23 +6,30 @@ html {
 }
 
 body{
-    font-family: "Roboto", "verdana", sans-serif;
+    font-family: "Trebuchet MS", "verdana", sans-serif;
 }
 
 a {
     cursor: pointer;
     cursor: hand;
 }
-
+h1{
+    font-size: 45px;
+}
 
 h1, h3 {
     color: #336DB5;
 }
-
+ul {
+    list-style-type: none;
+ }
+.logo{
+    padding-bottom: 30px;
+    width: 70%;
+    height:auto;
+}
 .sidenav {
     top: 0;
-    padding-top: 15px;
-    padding-bottom: 15px;
 }
 
 .projects span {
@@ -35,7 +42,39 @@ h1, h3 {
     font-weight: 100;    
 }
 
-
+.main-intro { 
+    padding-top: 150px;
+}
+.main-intro p {
+    font-size: 16px;
+    font-weight: 100;
+}
+.sidenav-contacts{
+    padding-top: 15px;
+}
+.sidenav-projects{
+    padding-top: 15px;
+}
+.sidenav-links .sidenav-button{
+    padding: 10px 0px;
+}
+.sidenav-links a{
+    color: black;
+}
+.sidenav .sidenav-footer {
+    position:absolute;
+    bottom: 20px;
+    font-size: 12px;
+}
+.sidenav-footer img{
+    width: 7%;
+    height: auto;
+}
+img.intro-icon-1 { left: 0%; position: relative; width: 6%; height: auto;}
+img.intro-icon-2 { left: 15%; position: relative; width: 6%; height: auto;}
+img.intro-icon-3 { left: 30%; position: relative; width: 6%; height: auto;}
+img.intro-icon-4 { left: 45%; position: relative; width: 6%; height: auto;}
+img.intro-icon-5 { left: 60%; position: relative; width: 6%; height: auto;}
 
 /* For Screens > 1920px  */
 @media (min-width: 1920px) {
@@ -45,6 +84,13 @@ h1, h3 {
     }
     .sidenav {
         width:20%;
+        padding-top: 30px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        border-right-style: solid;
+        border-color: lightgray;
+        border-width: 1px;
+
     }
     .projects{
         overflow: hidden;
@@ -55,20 +101,31 @@ h1, h3 {
         padding-bottom: 20px;
         margin-bottom: 0px;
     }
+    .main{
+        padding:20px;
+    }
+
 }
 
 @media (min-width: 1024px) and (max-width:1921px) {
     .sidenav {
         position: fixed;
         height: 100%;
-        width: 30%;
+        width: 20%;
         display: inline-block;
+        padding-top: 30px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        border-right-style: solid;
+        border-color: lightgray;
+        border-width: 1px;
     }
     .main {
-        left: 30%;
+        left: 20%;
         position: relative;
         display: block;
-        width: 70%;
+        width: 80%;
+        padding:50px;
     }
     .projects{
         overflow: hidden;
@@ -85,14 +142,21 @@ h1, h3 {
     .sidenav {
         position: fixed;
         height: 100%;
-        width: 30%;
+        width: 25%;
         display: inline-block;
+        padding-top: 30px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        border-right-style: solid;
+        border-color: lightgray;
+        border-width: 1px;
     }
     .main {
-        left: 30%;
+        left: 25%;
         position: relative;
         display: block;
-        width: 70%;
+        width: 75%;
+        padding: 30px;
     }
     .projects{
         overflow: hidden;
