@@ -15,6 +15,8 @@ a {
 }
 h1{
     font-size: 45px;
+    margin-top: 0px;
+    padding-top: 0px;
 }
 
 h1, h3 {
@@ -43,11 +45,12 @@ ul {
 }
 
 .main-intro { 
-    padding-top: 150px;
+    padding-top: 80px;
 }
 .main-intro p {
     font-size: 16px;
     font-weight: 100;
+    padding-bottom:20px;
 }
 .sidenav-contacts{
     padding-top: 15px;
@@ -75,6 +78,11 @@ img.intro-icon-2 { left: 15%; position: relative; width: 6%; height: auto;}
 img.intro-icon-3 { left: 30%; position: relative; width: 6%; height: auto;}
 img.intro-icon-4 { left: 45%; position: relative; width: 6%; height: auto;}
 img.intro-icon-5 { left: 60%; position: relative; width: 6%; height: auto;}
+
+.main-icons-text {
+    padding-bottom: 30px;
+
+}
 
 /* For Screens > 1920px  */
 @media (min-width: 1920px) {
