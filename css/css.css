@@ -58,9 +58,7 @@ ul {
 .sidenav-projects{
     padding-top: 15px;
 }
-.sidenav-links .sidenav-button{
-    padding: 10px 0px;
-}
+
 .sidenav-links a{
     color: black;
 }
@@ -84,68 +82,7 @@ img.intro-icon-5 { left: 60%; position: relative; width: 6%; height: auto;}
 
 }
 
-/* For Screens > 1920px  */
-@media (min-width: 1920px) {
-    .main-intro {
-        height: 300px;
-        display:block;
-    }
-    .sidenav {
-        width:20%;
-        padding-top: 30px;
-        padding-bottom: 15px;
-        padding-left: 15px;
-        border-right-style: solid;
-        border-color: lightgray;
-        border-width: 1px;
-
-    }
-    .projects{
-        overflow: hidden;
-    }
-    .projects img{
-        float: left;
-        margin-right: 20px;
-        padding-bottom: 20px;
-        margin-bottom: 0px;
-    }
-    .main{
-        padding:20px;
-    }
-
-}
-
-@media (min-width: 1024px) and (max-width:1921px) {
-    .sidenav {
-        position: fixed;
-        height: 100%;
-        width: 20%;
-        display: inline-block;
-        padding-top: 30px;
-        padding-bottom: 15px;
-        padding-left: 15px;
-        border-right-style: solid;
-        border-color: lightgray;
-        border-width: 1px;
-    }
-    .main {
-        left: 20%;
-        position: relative;
-        display: block;
-        width: 80%;
-        padding:50px;
-    }
-    .projects{
-        overflow: hidden;
-    }
-    .projects img{
-        float: left;
-        margin-right: 20px;
-        padding-bottom: 20px;
-        margin-bottom: 0px;
-    }
-}
-
+/* minimum resolution 1024 */
 @media (min-width: 1024px) {
     .sidenav {
         position: fixed;
@@ -175,4 +112,21 @@ img.intro-icon-5 { left: 60%; position: relative; width: 6%; height: auto;}
         padding-bottom: 20px;
         margin-bottom: 0px;
     }
+    .sidenav-button a{
+        text-decoration: none;
+        padding-top: 10px;
+        padding-right: 50px; 
+    }
+
+    .sidenav-button{
+        text-decoration: none;
+        padding: 10px 0px;
+    }      
+    .sidenav-button a:hover{
+        text-decoration: none;
+        background: #E7F1FC;
+        border-radius: 0px 34px 34px 0px;
+        padding: 10px 15px;
+        color:#0D4EAB;
+    }    
 }
