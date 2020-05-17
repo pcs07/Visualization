@@ -71,11 +71,11 @@ ul {
     width: 7%;
     height: auto;
 }
-img.intro-icon-1 { left: 0%; position: relative; width: 6%; height: auto;}
-img.intro-icon-2 { left: 15%; position: relative; width: 6%; height: auto;}
-img.intro-icon-3 { left: 30%; position: relative; width: 6%; height: auto;}
-img.intro-icon-4 { left: 45%; position: relative; width: 6%; height: auto;}
-img.intro-icon-5 { left: 60%; position: relative; width: 6%; height: auto;}
+img.intro-icon-1 { left: 0%; position: relative; width: 9%; height: auto;}
+img.intro-icon-2 { left: 12%; position: relative; width: 9%; height: auto;}
+img.intro-icon-3 { left: 24%; position: relative; width: 9%; height: auto;}
+img.intro-icon-4 { left: 36%; position: relative; width: 9%; height: auto;}
+img.intro-icon-5 { left: 48%; position: relative; width: 9%; height: auto;}
 
 .main-icons-text {
     padding-bottom: 30px;
@@ -117,7 +117,9 @@ img.intro-icon-5 { left: 60%; position: relative; width: 6%; height: auto;}
         padding-top: 10px;
         padding-right: 50px; 
     }
-
+    .sidenav-project-padding{
+        padding-bottom: 10px;
+    }
     .sidenav-button{
         text-decoration: none;
         padding: 10px 0px;
