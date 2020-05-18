@@ -58,7 +58,7 @@ ul {
     font-weight: 100;
     margin-bottom: 5px;
 }
-.main-intro p1 {
+p1 {
     font-size: 21px;
     font-weight: 100;
     margin-bottom: 10px;
@@ -97,8 +97,27 @@ img.intro-icon-5 { left: 48%; position: relative; width: 9%; height: auto;}
 
 .main-icons-text {
     padding-bottom: 30px;
-
 }
+.about {
+    background-color: #E7F1FC;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    padding-top:20px;
+}
+.about_1 {padding:30px; grid-column: 1; grid-row: 1;}
+.about_2 {padding:30px; grid-column: 2; grid-row: 1;}
+.about_3 {padding:30px; grid-column: 3; grid-row: 1;}
+.about_4 {padding:30px; grid-column: 1; grid-row: 2;}
+.about_5 {padding:30px; grid-column: 2; grid-row: 2;}
+.about_6 {padding:30px; grid-column: 3; grid-row: 2;}
+
+.about p{
+    padding: 10px 20px;
+}
+
 
 /* minimum resolution 1024 */
 @media (min-width: 1024px) {
