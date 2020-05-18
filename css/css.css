@@ -6,7 +6,7 @@ html {
 }
 
 body{
-    font-family: "Trebuchet MS", "verdana", sans-serif;
+    font-family: "Muli", "Trebuchet MS", "verdana", sans-serif;
 }
 
 a {
@@ -16,6 +16,7 @@ a {
 h1{
     font-size: 45px;
     margin-top: 0px;
+    margin-bottom: 5px;
     padding-top: 0px;
 }
 
@@ -41,16 +42,28 @@ ul {
     border-radius: 23px;
     color: #336DB5;
     padding: 4px 9px;
-    font-weight: 100;    
+    font-weight: 100;
+    font-size: 13;   
 }
 
 .main-intro { 
     padding-top: 80px;
 }
+.main-intro img{ 
+    width: 2.5%;
+    height: auto;
+}
 .main-intro p {
-    font-size: 16px;
+    font-size: 21px;
     font-weight: 100;
-    padding-bottom:20px;
+    margin-bottom: 5px;
+}
+.main-intro p1 {
+    font-size: 21px;
+    font-weight: 100;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    color: #336DB5;
 }
 .sidenav-contacts{
     padding-top: 15px;
@@ -71,11 +84,16 @@ ul {
     width: 7%;
     height: auto;
 }
+.main-icons{
+    padding-top: 70px;
+    padding-bottom:70px;
+}
 img.intro-icon-1 { left: 0%; position: relative; width: 9%; height: auto;}
 img.intro-icon-2 { left: 12%; position: relative; width: 9%; height: auto;}
 img.intro-icon-3 { left: 24%; position: relative; width: 9%; height: auto;}
 img.intro-icon-4 { left: 36%; position: relative; width: 9%; height: auto;}
 img.intro-icon-5 { left: 48%; position: relative; width: 9%; height: auto;}
+
 
 .main-icons-text {
     padding-bottom: 30px;
