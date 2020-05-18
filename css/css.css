@@ -105,7 +105,6 @@ img.intro-icon-5 { left: 48%; position: relative; width: 9%; height: auto;}
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
-    padding-top:20px;
 }
 .about_1 {padding:30px; grid-column: 1; grid-row: 1;}
 .about_2 {padding:30px; grid-column: 2; grid-row: 1;}
@@ -114,8 +113,9 @@ img.intro-icon-5 { left: 48%; position: relative; width: 9%; height: auto;}
 .about_5 {padding:30px; grid-column: 2; grid-row: 2;}
 .about_6 {padding:30px; grid-column: 3; grid-row: 2;}
 
-.about p{
-    padding: 10px 20px;
+
+.main-intro{
+    padding-bottom: 20px;
 }
 
 
