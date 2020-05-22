@@ -25,6 +25,7 @@ h1, h3 {
 }
 ul {
     list-style-type: none;
+    padding-left: 0;
  }
 .logo{
     padding-bottom: 30px;
