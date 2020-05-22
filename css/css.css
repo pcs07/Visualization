@@ -139,13 +139,15 @@ img.intro-icon-5 { left: 48%; position: relative; width: 9%; height: auto;}
         position: relative;
         display: block;
         width: 75%;
-        padding: 50px;
+        padding: 4em 7.5em 0em 7.5em;
     }
     .projects{
         overflow: hidden;
     }
-    .projects img{
+    .projects .project_thumb{
         float: left;
+        width:50%;
+        height:auto;
         margin-right: 20px;
         padding-bottom: 20px;
         margin-bottom: 0px;
